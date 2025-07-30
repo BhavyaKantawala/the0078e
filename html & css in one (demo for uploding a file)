@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with Logo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/592a9fc531.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Comic Sans MS", sans-serif;
+      }
+
+      body {
+        background-color: #000d20;
+        color: white;
+        font-family: "Kumbh Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background: #86848b;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 50px;
+      }
+
+      .logo {
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      #navbar__logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+      }
+
+      .navbar__menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+      }
+
+      .navbar__item {
+        height: 80px;
+      }
+
+      .navbar__links {
+        color: #ffffff;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0 1rem;
+        height: 100%;
+        white-space: nowrap;
+      }
+
+      .navbar__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        background: #e6e5e7;
+        color: #2d3142;
+      }
+
+      .button:hover {
+        background: #2d3142;
+        color: #ffffff;
+        transition: all 0.3s ease;
+      }
+
+      .navbar__links:hover {
+        color: #000d20;
+        transition: all 0.3s ease;
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar__container {
+          flex-direction: column;
+          padding: 0 20px;
+        }
+
+        .navbar__menu {
+          flex-direction: column;
+        }
+
+        .navbar__item {
+          width: 100%;
+        }
+
+        .navbar__links {
+          width: 100%;
+          padding: 1rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo">
+          <img
+            class="logo"
+            src="/WhatsApp Image 2025-07-23 at 11.03.59_cdf75041.png"
+            alt="Logo"
+            style="height: 80px; vertical-align: middle; margin-right: 8px"
+          />
+        </a>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Projects</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">About Us</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="/" class="button">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
