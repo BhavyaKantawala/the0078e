@@ -1,17 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Comic sans ms", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+body {
+  background: #c2e0ff;
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(194, 224, 255, 1) 52%,
+    rgba(130, 172, 255, 1) 93%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(194, 224, 255, 1) 52%,
+    rgba(130, 172, 255, 1) 93%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(194, 224, 255, 1) 52%,
+    rgba(130, 172, 255, 1) 93%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#C2E0FF",
+  endColorstr="#82ACFF",
+  GradientType=0
+);
+  background-attachment: fixed;
+  color: white; /* Optional for readability */
+  font-family: "Kumbh Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .navbar {
-  background: #86848b;
-  height: 40px;
+  background: #82acff;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -28,12 +65,12 @@
   padding: 0 50px;
 }
 
-.logo{
+.logo {
   padding-top: 2px;
   padding-bottom: 2px;
   border-radius: 50px;
   border: black;
-  border-style:hidden;
+  border-style: hidden;
 }
 
 #navbar__logo {
@@ -164,11 +201,6 @@
   }
 }
 
-/*Hero Section CSS*/
-.body {
-  background-color: #D8D5D8;
-}
-
 .main__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -176,7 +208,7 @@
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: #D8D5D8;
+  background-color: #d8d5d8;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -562,12 +594,4 @@
     padding: 10px;
     width: 100%;
   }
-}
-
-body {
-  background-color: #000d20;
-  color: white; /* Optional for readability */
-  font-family: "Kumbh Sans", sans-serif;
-  margin: 0;
-  padding: 0;
 }
