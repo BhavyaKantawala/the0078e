@@ -1,54 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("path/to/Zolo.css");
+@font-face {
+  font-family: "Zolo";
+  src: url("/fonts/ZOLO-Regular.woff2") format("woff2"),
+    url("/fonts/ZOLO-Regular.woff") format("woff"),
+    url("/fonts/ZoloRegular-BLrp8.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 1px;
+  font-family: "", sans-serif;
+  letter-spacing: 1.2px;
 }
 body {
-  background: #c2e0ff;
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(194, 224, 255, 1) 52%,
-    rgba(130, 172, 255, 1) 93%
-  );
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(194, 224, 255, 1) 52%,
-    rgba(130, 172, 255, 1) 93%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(194, 224, 255, 1) 52%,
-    rgba(130, 172, 255, 1) 93%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(
-  startColorstr="#C2E0FF",
-  endColorstr="#82ACFF",
-  GradientType=0
-);
-  background-attachment: fixed;
-  color: white; /* Optional for readability */
+  background: #e7fbf9; /*Light Theme = #e7fbf9*/
+  color: black; /* Optional for readability */
   font-family: "Kumbh Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-
 .navbar {
-  background: #82acff;
+  background: #b9e4f4; /*Light Theme = #b9e4f4*/
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -102,7 +84,7 @@ body {
 }
 
 .navbar__links {
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -111,6 +93,8 @@ body {
   padding: 0 1rem;
   height: 100%;
   white-space: nowrap;
+  font-family: "Zolo", sans-serif;
+  letter-spacing: 1.2px;
 }
 
 .navbar__links:hover {
