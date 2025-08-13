@@ -1,4 +1,38 @@
+@import url("path/to/Slabion.css");
+@import url("path/to/Youth.css");
+@import url("path/to/Kakuati.css");
 @import url("path/to/Zolo.css");
+
+@font-face {
+  font-family: "Slabion";
+  src: url("/fonts/Slabion.woff2") format("woff2"),
+    url("/fonts/Slabion.woff") format("woff"),
+    url("/fonts/Slabion-ZpJZB.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Youth";
+  src: url("/fonts/TheYouth-Regular.woff2") format("woff2"),
+    url("/fonts/TheYouth-Regular.woff") format("woff"),
+    url("/fonts/the-youth.otf") format("opentype");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kakuati";
+  src: url("/fonts/KakuatiLight.woff2") format("woff2"),
+    url("/fonts/KakuatiLight.woff") format("woff"),
+    url("/fonts/KakuatiLight.otf") format("opentype");
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "Zolo";
   src: url("/fonts/ZOLO-Regular.woff2") format("woff2"),
@@ -19,7 +53,7 @@
 body {
   background: #e7fbf9; /*Light Theme = #e7fbf9*/
   color: black; /* Optional for readability */
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: "", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -92,8 +126,9 @@ body {
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  font-size: 22px;
   white-space: nowrap;
-  font-family: "Zolo", sans-serif;
+  font-family: "Slabion", sans-serif;
   letter-spacing: 1.2px;
 }
 
@@ -188,14 +223,14 @@ body {
 .main__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: "image text"; /* This swaps positions */
   align-items: center;
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: #d8d5d8;
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
+  height: 675px;
   padding: 0 50px;
 }
 
@@ -211,21 +246,37 @@ body {
 }
 
 .main__content h2 {
-  font-size: 4rem;
-  background-color: #ff8177;
-  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  font-family: "Youth", sans-serif;
+  grid-area: text;
+  font-size: 3.5rem;
+  background-color: black;
   background-size: 100%;
   background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 2.3;
 }
 
-.main__content p {
+.body__content p {
+  font-family: "kakuati", sans-serif;
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
+  color: black;
+  text-align: left;
+}
+
+.main__img--container {
+  text-align: center;
+  grid-area: image;
+}
+
+.body__content a {
+  font-family: "Slabion", sans-serif;
+  font-size: 30px;
 }
 
 .main__btn {
@@ -235,7 +286,7 @@ body {
   border: none;
   border-radius: 4px;
   column-rule-color: #fff;
-  margin-top: 2rem;
+  margin-top: 1rem;
   cursor: pointer;
   position: relative;
   transition: all 0.35s;
@@ -247,6 +298,7 @@ body {
   z-index: 2;
   color: #fff;
   text-decoration: none;
+  display: inline-block; /* prevents weird text shifts */
 }
 
 .main__btn::after {
@@ -257,8 +309,9 @@ body {
   width: 0;
   height: 100%;
   background: #4837ff;
-  transition: all 0.35s;
+  transition: width 0.35s ease; /* smoother transition */
   border-radius: 4px;
+  z-index: 1; /* sits under the text */
 }
 
 .main__btn:hover {
@@ -269,8 +322,33 @@ body {
   width: 100%;
 }
 
-.main__img--container {
-  text-align: center;
+.tagline {
+  font-family: "kakuati", sans-serif;
+  margin-top: 0.3rem; /* less space above tagline */
+  margin-bottom: 0.8rem; /* less space before button */
+  line-height: 1.3; /* slightly tighter paragraph text */
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s; /* appears after headline */
+}
+
+.fade-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 1.5s; /* appears after tagline */
+  margin-top: 10rem; /* remove any extra gap above button */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #main__img {
@@ -331,25 +409,26 @@ body {
   }
 }
 
-/*Services Section CSS*/
-.services {
-  background: #141414;
+/*Members Section CSS*/
+.members {
+  background: #e7fbf9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
-.services h1 {
+.members h1 {
+  font-family: "Slabion", sans-serif;
   background-color: #ff8177;
   background-image: linear-gradient(
     to right,
-    #ff8177 0%,
-    #ff867a 0%,
-    #ff8c7f 21%,
-    #f99185 52%,
-    #cf556c 78%,
-    #b1285b 100%
+    #83b7de 7%,
+    #75b1e0 14%,
+    #59a4dd 21%,
+    #4596d4 52%,
+    #3096e3 78%,
+    #256da4 100%
   );
   background-size: 100%;
   margin-bottom: 5rem;
@@ -360,13 +439,20 @@ body {
   -moz-text-fill-color: transparent;
 }
 
-.services__container {
+.members__card h2,
+p {
+  font-family: "kakuati", sans-serif;
+  position: absolute;
+  color: #fff;
+}
+
+.members__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.services__card {
+.members__card {
   margin: 1rem;
   height: 525px;
   width: 400px;
@@ -382,7 +468,7 @@ body {
   color: #fff;
 }
 
-.services__card:nth-child(2) {
+.members__card:nth-child(2) {
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 0%,
@@ -391,59 +477,45 @@ body {
     url("./images/pic3.jpg");
 }
 
-.services h2 {
+.members h2 {
   position: absolute;
   top: 350px;
   left: 30px;
 }
 
-.services__card p {
-  position: absolute;
-  top: 400px;
-  left: 30px;
-}
-
-.services__card button {
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  background: #f77062;
-  position: absolute;
-  top: 440px;
-  left: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.services__card:hover {
+.members__card:hover {
   transform: scale(1.075);
   transition: 0.2s ease-in;
   cursor: pointer;
 }
 
+.members__card p {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
 @media screen and (max-width: 960px) {
-  .services {
+  .members {
     height: 1600px;
   }
 
-  .services h1 {
+  .members h1 {
     font-size: 2rem;
     margin-top: 12rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .services {
+  .members {
     height: 1400px;
   }
 
-  .services h1 {
+  .members h1 {
     font-size: 1.2rem;
   }
 
-  .services__card {
+  .members__card {
     width: 300px;
   }
 }
