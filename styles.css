@@ -341,7 +341,7 @@ body {
   transform: translateY(20px);
   animation: fadeUp 2s ease forwards;
   animation-delay: 1.5s; /* appears after tagline */
-  margin-top: 10rem; /* remove any extra gap above button */
+  margin-top: 12rem; /* remove any extra gap above button */
 }
 
 @keyframes fadeUp {
