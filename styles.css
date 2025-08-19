@@ -5,40 +5,43 @@
 
 @font-face {
   font-family: "Slabion";
-  src: url("/fonts/Slabion.woff2") format("woff2"),
-    url("/fonts/Slabion.woff") format("woff"),
-    url("/fonts/Slabion-ZpJZB.ttf") format("truetype");
-  font-weight: lighter;
+  src: url("./fonts/Slabion.woff2") format("woff2"),
+       url("./fonts/Slabion.woff") format("woff"),
+       url("./fonts/Slabion-ZpJZB.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+/* Youth */
 @font-face {
   font-family: "Youth";
-  src: url("/fonts/TheYouth-Regular.woff2") format("woff2"),
-    url("/fonts/TheYouth-Regular.woff") format("woff"),
-    url("/fonts/the-youth.otf") format("opentype");
-  font-weight: lighter;
+  src: url("./fonts/TheYouth-Regular.woff2") format("woff2"),
+       url("./fonts/TheYouth-Regular.woff") format("woff"),
+       url("./fonts/the-youth.otf") format("opentype");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+/* Kakuati */
 @font-face {
   font-family: "Kakuati";
-  src: url("/fonts/KakuatiLight.woff2") format("woff2"),
-    url("/fonts/KakuatiLight.woff") format("woff"),
-    url("/fonts/KakuatiLight.otf") format("opentype");
-  font-weight: lighter;
+  src: url("./fonts/KakuatiLight.woff2") format("woff2"),
+       url("./fonts/KakuatiLight.woff") format("woff"),
+       url("./fonts/KakuatiLight.otf") format("opentype");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+/* Zolo */
 @font-face {
   font-family: "Zolo";
-  src: url("/fonts/ZOLO-Regular.woff2") format("woff2"),
-    url("/fonts/ZOLO-Regular.woff") format("woff"),
-    url("/fonts/ZoloRegular-BLrp8.ttf") format("truetype");
-  font-weight: lighter;
+  src: url("./fonts/ZOLO-Regular.woff2") format("woff2"),
+       url("./fonts/ZOLO-Regular.woff") format("woff"),
+       url("./fonts/ZoloRegular-BLrp8.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
